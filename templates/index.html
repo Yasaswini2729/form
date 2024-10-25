@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>This page is for Form Submission</h1>
+    <hr>
+    <form method="GET">{% csrf_token %}
+        
+        <br><br>
+        <label for="n1">Number:</label>
+        <input name="num" id="n1" type="number" placeholder="Enter number" required>
+        <br><br><button>submit</button>
+    </form>
+    <h2>Hi Guys: <br>
+        {% if res %}
+            Given Number is EVEN
+        {% else %} 
+            Given Number is ODD
+        {% endif %}
+       </h2>
+</body>
+</html>
